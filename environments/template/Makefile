@@ -1,5 +1,6 @@
 REGION := $(AWS_REGION)
-VAULT_CMD := aws-vault exec $(AWS_PROFILE) --duration=1h --
+#VAULT_CMD := aws-vault exec $(AWS_PROFILE) --duration=1h --debug --
+VAULT_CMD := aws-vault exec $(AWS_PROFILE) --no-session --
 TF_CMD := terraform
 CMD := $(VAULT_CMD) $(TF_CMD)
 
